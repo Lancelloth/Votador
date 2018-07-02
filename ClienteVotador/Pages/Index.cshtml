@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="login">
+    <h1>Login</h1>
+    <form method="post">
+        <input type="Email" name="Email" placeholder="Username" required="required" />
+        <input type="password" name="Password" placeholder="Password" required="required" min="6"/>
+        <button type="submit" formaction="Cliente/Login" class="btn btn-primary btn-block btn-large">Entrar</button>
+    </form>
+    <br>
+    <!-- login bootsnipp -->
+    
+</div>

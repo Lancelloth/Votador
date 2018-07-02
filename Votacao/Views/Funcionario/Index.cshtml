@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AlterdataVotacao.Model.Funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<html>
+<body>
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Criar Novo Funcionario", "Create", "Funcionario")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    <a asp-action="Funcionario/Edit(@item.Id)" asp-route-id="@item.Id" on-click=>Editar</a> |
+                    <a asp-action="Funcionario/Delete" asp-route-id="@item.Id" value="@item.Id" onclick="return confirm('Tem certeza que deseja excluir?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

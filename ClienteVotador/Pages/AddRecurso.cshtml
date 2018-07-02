@@ -1,0 +1,21 @@
+﻿@page
+@model ClienteVotador.Pages.AddRecursoModel
+@{
+    ViewData["Title"] = "AddRecurso";
+    Layout = "~/Pages/_Layout.cshtml";
+}
+
+<content class="col-sm-6 col-lg-offset-3">
+    <div class="container-fluid" style="margin: 0 auto;float: none; background-color:slategray;">
+        <form method="post" style="margin:auto">
+            <div>
+                <label for="Recurso"> Nome Recurso:</label>
+                <input type="text" name="Recurso" placeholder="Recurso" required="required" />
+            </div>
+            <div>
+                <button type="submit" name="ConfirmaPassword" class="btn-primary col-sm-10 col-lg-offset-1" style="position:center">Cadastrar</button>
+
+            </div>
+        </form>
+    </div>
+</content>

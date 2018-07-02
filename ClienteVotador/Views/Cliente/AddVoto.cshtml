@@ -1,0 +1,22 @@
+﻿@page
+@{
+    Layout = "~/Pages/_Layout.cshtml";
+}
+
+    <div class="container-fluid">
+        <form method="post" style="margin: 0 auto; padding: 25px; background-color:white;">
+            <input type="hidden" name="DataHora" id="DataVotacao" value="" readonly />
+            <input type="hidden" name="IdFuncionario" id="DataVotacao" value="" readonly />
+            <div>
+                <label for="Senha">Recurso:</label>
+                @Html.DropDownList("IdRecurso", (IEnumerable<SelectListItem>)ViewBag.Recurso)
+            </div>
+            <div>
+                <label for="Comentario">Comentário(obrigatório):</label>
+                <textarea name="Comentario" required="required"></textarea>
+            </div>
+            <div>
+                <button type="submit" name="ConfirmaPassword" class="btn-primary btn-block" style="position:center">Cadastrar</button>
+            </div>
+        </form>
+    </div>
